@@ -3,7 +3,22 @@
 
 <body>
 
-	<strong>{{ content }}</strong>
-
+	<strong>Teachers!</strong>
+	{% if content %}
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Teaching area</th>
+		</tr>
+		{% for Teach in content %}
+		<tr>
+			<td>{{Teach.Name}}</td>
+			<td>{{Teach.Area}}</td>
+		</tr>
+		{% endfor %}
+	</table>
+	{% else %}
+	<strong>No DATA!</strong>
+	{% endif %}
 </body>
 </html>
