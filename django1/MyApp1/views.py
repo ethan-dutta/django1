@@ -7,3 +7,5 @@ def index(request):
     teach = teacher.objects.all()
 
     return render(request, "MyApp1/index.html", {'content': teach})
+
+#m pushing
