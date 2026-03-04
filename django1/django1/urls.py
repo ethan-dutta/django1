@@ -28,5 +28,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^$', MyApp1.views.index, name = 'index'),
     re_path(r'home$', MyApp1.views.index, name = 'home'),
+    path('', include('MyApp1.urls')),
 ]
 
